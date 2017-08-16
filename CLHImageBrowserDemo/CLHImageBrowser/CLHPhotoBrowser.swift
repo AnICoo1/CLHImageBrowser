@@ -97,10 +97,11 @@ extension CLHPhotoBrowser {
             let imageX: CGFloat = CGFloat(column) * (imageW + 5.0)
             let imageY = CGFloat(row) * (imageH + 5.0)
             imageV.frame = CGRect(x: imageX, y: imageY, width: imageW, height: imageH)
-            print(imageV.frame)
+            
             let tap = UITapGestureRecognizer(target: self, action: #selector(click(tap:)))
             imageV.addGestureRecognizer(tap)
             addSubview(imageV)
+            print(imageV.isUserInteractionEnabled)
         }
 
     }

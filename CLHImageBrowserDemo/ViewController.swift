@@ -14,8 +14,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
-        let imageBrowser = CLHPhotoBrowser(frame: CGRect(x: 50, y: 200, width: 250, height: 100))
-        imageBrowser.imageDataArrayFromLocal = ["3", "4", "5", "6", "7", "8"]
+        let imageBrowser = CLHPhotoBrowser(frame: CGRect(x: 50, y: 200, width: 250, height: 200))
+        imageBrowser.backgroundColor = .red
+        imageBrowser.imageDataArrayFromLocal = ["3", "4", "5"]
+        imageBrowser.imageDataArrayFromURL = ["http://www.quentinroussat.fr/assets/img/iOS%20icon's%20Style/ios8.png", "http://www.quentinroussat.fr/assets/img/iOS%20icon's%20Style/ios8.png", "http://www.quentinroussat.fr/assets/img/iOS%20icon's%20Style/ios8.png"]
         view.addSubview(imageBrowser)
         imageBrowser.show()
     }

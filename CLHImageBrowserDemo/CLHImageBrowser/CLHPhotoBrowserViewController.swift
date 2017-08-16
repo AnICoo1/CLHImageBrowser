@@ -64,6 +64,9 @@ extension CLHPhotoBrowserViewController: UICollectionViewDelegate, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CLHPhotoCell
+        for v in cell.contentView.subviews {
+            v.removeFromSuperview()
+        }
         cell.imageView = UIImageView(image: imageArray?[indexPath.row])
         cell.delegate = self
         return cell
